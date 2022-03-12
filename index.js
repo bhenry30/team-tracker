@@ -23,6 +23,7 @@
 // Dependencies
 const inquirer = require('inquirer')
 const writeFile = require('./utils/generate-site')
+const generatePage = require('./src/page-template')
 
 const employees = []
 
@@ -144,11 +145,24 @@ const promptUser = () => {
                     }
                 }
             },
+            {
+                type: 'confirm',
+                name: 'confirmAdd',
+                message: 'Would you like to add another employee to the team?',
+                default: true
+            }
 
         ])
         .then(userResponse => {
             employees.push(userResponse)
+            if (userResponse.confirmAdd) {
+                return promptUser();
+            }
+            console.log(employees)
+            return employees;
         })
 };
 
-promptUser().then(userData => generatePage(userData));
+promptUser().then(userData => generatePage(userData))
+.then(html => writeFile(html))
+.catch(err => console.log(err));
