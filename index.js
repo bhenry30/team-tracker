@@ -22,7 +22,133 @@
 
 // Dependencies
 const inquirer = require('inquirer')
+const writeFile = require('./utils/generate-site')
+
+const employees = []
 
 const promptUser = () => {
+        return inquirer.prompt([
+            {
+                type: 'input',
+                name: 'name',
+                message: 'What is the name of the employee?',
+                validate : nameInput => {
+                    if (nameInput) {
+                        return true
+                    } else {
+                        console.log('Please enter the name of the employee!');
+                        return false
+                    }
+                }
+
+            },
+            {
+                type: 'input',
+                name: 'id',
+                message: 'What is their employee ID?',
+                validate : idInput => {
+                    if (idInput) {
+                        return true
+                    } else {
+                        console.log('Please enter the ID of the employee!');
+                        return false
+                    }
+                }
     
-}
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: 'What is the email address of the employee?',
+                validate : emailInput => {
+                    if (emailInput) {
+                        return true
+                    } else {
+                        console.log('Please provide the email address of the employee!');
+                        return false
+                    }
+                }
+    
+            },
+            {
+                type: 'list',
+                name: 'role',
+                message: 'What is the role of the employee?',
+                choices: ['Manager', 'Engineer', 'Intern'],
+                validate : roleInput => {
+                    if (roleInput) {
+                    return true
+                    } else {
+                    console.log('Please enter the name of the employee!');
+                    return false
+                    }
+                }
+            },
+            {
+                type: 'input',
+                name: 'school',
+                message: 'What is the school that the intern attends?',
+                when: ({ role }) => {
+                    if (role === 'Intern') {
+                        return true
+                    } else {
+                        return false
+                    }
+                },
+                validate : schoolInput => {
+                    if (schoolInput) {
+                        return true
+                    } else {
+                        console.log('Please provide the school that the intern attends!');
+                        return false
+                    }
+                }
+            },
+            {
+                type: 'input',
+                name: 'github',
+                message: 'What is the GitHub profile name of the engineer?',
+                when: ({ role }) => {
+                    if (role === 'Engineer') {
+                        return true
+                    } else {
+                        return false
+                    }
+                },
+                validate : githubInput => {
+                    if (githubInput) {
+                        return true
+                    } else {
+                        console.log('Please provide the GitHub profile name of the engineer!');
+                        return false
+                    }
+                }
+            },
+            {
+                type: 'input',
+                name: 'officeNum',
+                message: 'What is the manager\'s office number?',
+                when: ({ role }) => {
+                    if (role === 'Manager') {
+                        return true
+                    } else {
+                        return false
+                    }
+                },
+                validate : officeNumInput => {
+                    if (officeNumInput) {
+                        return true
+                    } else {
+                        console.log('Please provide the GitHub profile name of the engineer!');
+                        return false
+                    }
+                }
+            },
+
+        ])
+        .then(userResponse => {
+            employees.push(userResponse)
+        })
+};
+
+promptUser().then(userData => generatePage(userData));

@@ -2,9 +2,13 @@ const generateEmployee = employeeInfo => {
 
     let cards = '';
     
+    employeeInfo.forEach(employee => {
     
-    
+    const { name, id, role, email } = employee;
+    let newEmployee = '';
     let specificInfo = '';
+    
+    
     cards += 
     `
     <div class="row">
@@ -29,6 +33,7 @@ const generateEmployee = employeeInfo => {
 }
 
 const generatePage = templateData => {
+    
     return 
     `
     <!DOCTYPE html>
@@ -40,6 +45,7 @@ const generatePage = templateData => {
             <link rel="stylesheet" href="syle.css" />
             <title>Team Tracker</title>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         </head>
 
         <body>
@@ -47,7 +53,7 @@ const generatePage = templateData => {
             <header>
                 <h1>>Header</h1>
             </header>
-    
+            
             <script src="Index.js"></script>
         </body>
     </html>`
