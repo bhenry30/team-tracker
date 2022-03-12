@@ -47,11 +47,11 @@ const generateEmployee = employeeInfo => {
       </div>
     </div>
     `
-    })
+    });
+    return cards;
 }
 
 const generatePage = templateData => {
-    
     return `
     <!DOCTYPE html>
     <html lang="en">
