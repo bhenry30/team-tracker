@@ -16,8 +16,8 @@ const generateEmployee = employeeInfo => {
 
     switch (role) {
         case 'Manager':
-            newEmployee = new Manager(name, id, email, employee.number);
-            specificInfo = newEmployee.getOfficeNum();
+            newEmployee = new Manager(name, id, email, employee.officeNum);
+            specificInfo = 'Office Number: ' + newEmployee.getOfficeNum();
             break;
         case 'Engineer':
             newEmployee = new Engineer(name, id, email, employee.github);
@@ -25,19 +25,19 @@ const generateEmployee = employeeInfo => {
             break;
         case 'Intern':
             newEmployee = new Intern(name, id, email, employee.school);
-            specificInfo = 'School:' + newEmployee.getSchool();
+            specificInfo = 'School: ' + newEmployee.getSchool();
             break;
-      }
+    }
     
     cards += 
     `
     <div class="row">
-      <div class="col s12 m6">
-        <div class="card blue-grey darken-1">
+      <div class="col s12 m6" style= "width: 100%">
+        <div class="card col s3 blue-grey darken-1">
           <div class="card-content white-text">
-            <span class="card-title">${newEmployee.getName()}</span>
-            <p>
-            ${newEmployee.getIcon()} ${newEmployee.getRole()}</br>
+            <span class="card-title white-text">${newEmployee.getName()}</span>
+            <p class="white-text">
+            <i class="${newEmployee.getIcon()}"></i> ${newEmployee.getRole()}</br>
             ID: ${newEmployee.getID()}</br>
             Email: <span id='email'><a href='mailto:${newEmployee.getEmail()}'>${newEmployee.getEmail()}</a></span></br>
             ${specificInfo}
@@ -62,13 +62,11 @@ const generatePage = templateData => {
         <link rel="stylesheet" href="syle.css" />
         <title>Team Tracker</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     </head>
     <body>
-    <header>
-        
-        <div class='row blue m0 lighten-1'>
-            <h2 class='white-text col s4 center-align'>My Team</h1>
-        </div>
+    <header class= 'row blue m0 lighten-1'>
+    <h2 class='white-text col s4' style='text-align: center; width: 100%''>My Team</h1>
     </header>
     <main>
         <div>

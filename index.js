@@ -88,7 +88,7 @@ const promptUser = () => {
             {
                 type: 'input',
                 name: 'school',
-                message: 'What is the school that the intern attends?',
+                message: 'What school does the intern attend?',
                 when: ({ role }) => {
                     if (role === 'Intern') {
                         return true

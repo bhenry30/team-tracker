@@ -1,10 +1,10 @@
 const Engineer = require('../lib/Engineer')
-const engineer = new Engineer('Brando', 3, 'brando20');
+const engineer = new Engineer('Brando', 3, 'brando@gmail.com', 'bhenry30');
 
 test('creates an engineer', () => {
     expect(engineer.name).toBe('Brando');
     expect(engineer.id).toEqual(expect.any(Number));
-    expect(engineer.github).toBe('brando20')
+    expect(engineer.github).toBe('bhenry30')
 })
 
 test('get\'s engineer name', () => {
@@ -24,5 +24,5 @@ test('get\'s engineer email', () => {
 });
 
 test('get\'s engineer GitHub', () => {
-    expect(engineer.getGithub()).toBe('Github: <a href="https://github.com/brando20">brando20<a/>')
+    expect(engineer.getGithub()).toBe('Github: <a href="https://github.com/bhenry30">bhenry30<a/>')
 });
