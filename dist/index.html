@@ -4,68 +4,87 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <link rel="stylesheet" href="syle.css" />
         <title>Team Tracker</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+        <script src="https://kit.fontawesome.com/1e8a253695.js" crossorigin="anonymous"></script>
     </head>
     <body>
-    <header class= 'row blue m0 lighten-1'>
-    <h2 class='white-text col s4' style='text-align: center; width: 100%''>My Team</h1>
-    </header>
+    <nav class="navbar is-primary">
+      <div class="navbar-item title has-text-white has-text-centered py-5">
+      The Team
+      </div>
+    </nav>
     <main>
-        <div>
-            
-    <div class="row">
-      <div class="col m6" style= "width: 100%">
-        <div class="card col s3 blue-grey darken-1">
-          <div class="card-content white-text">
-            <span class="card-title white-text">Anna</span>
-            <p class="white-text">
-            <i class="fa-solid fa-mug-hot"></i> Manager</br>
-            ID: 2</br>
-            Email: <span id='email'><a href='mailto:Anna@company.com'>Anna@company.com</a></span></br>
-            Office Number: 301
-            </p>
-          </div>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-variable mt-3 is-4">
+          
+    <div class="column is-3">
+    <div class="card">
+      <div class="card-content">
+        <div class="media-content">
+          <span class="icon">
+            <i class="fas fa-mug-hot"></i>
+          </span>
+          <p class="title is-4">Anna</p>
+          <p class="subtitle is-6">Manager</p>
+        </div>
+        </br>
+        </br>
+        <div class="content">
+        <p><strong>ID:</strong> 1</p>
+        <p><strong>Email:</strong> <span id='email'><a href='mailto:a@gmail.com'>a@gmail.com</a></span></p>
+        <p><strong>Office Number:</strong> 1</p>
         </div>
       </div>
     </div>
+    </div>
     
-    <div class="row">
-      <div class="col m6" style= "width: 100%">
-        <div class="card col s3 blue-grey darken-1">
-          <div class="card-content white-text">
-            <span class="card-title white-text">Brando</span>
-            <p class="white-text">
-            <i class="fa-solid fa-glasses"></i> Engineer</br>
-            ID: 7</br>
-            Email: <span id='email'><a href='mailto:brando@gmail.com'>brando@gmail.com</a></span></br>
-            Github: <a href="https://github.com/bhenry30">bhenry30<a/>
-            </p>
-          </div>
+    <div class="column is-3">
+    <div class="card">
+      <div class="card-content">
+        <div class="media-content">
+          <span class="icon">
+            <i class="fas fa-glasses"></i>
+          </span>
+          <p class="title is-4">Brando</p>
+          <p class="subtitle is-6">Engineer</p>
+        </div>
+        </br>
+        </br>
+        <div class="content">
+        <p><strong>ID:</strong> 2</p>
+        <p><strong>Email:</strong> <span id='email'><a href='mailto:b@gmail.com'>b@gmail.com</a></span></p>
+        <p><strong>Github:</strong> <a href="https://github.com/bhenry30">bhenry30</a></p>
         </div>
       </div>
     </div>
+    </div>
     
-    <div class="row">
-      <div class="col m6" style= "width: 100%">
-        <div class="card col s3 blue-grey darken-1">
-          <div class="card-content white-text">
-            <span class="card-title white-text">Clive</span>
-            <p class="white-text">
-            <i class="fa-solid fa-user-graduate"></i> Intern</br>
-            ID: 32</br>
-            Email: <span id='email'><a href='mailto:clive@yahoo.com'>clive@yahoo.com</a></span></br>
-            School: Stanford
-            </p>
-          </div>
+    <div class="column is-3">
+    <div class="card">
+      <div class="card-content">
+        <div class="media-content">
+          <span class="icon">
+            <i class="fas fa-user-graduate"></i>
+          </span>
+          <p class="title is-4">Clive</p>
+          <p class="subtitle is-6">Intern</p>
+        </div>
+        </br>
+        </br>
+        <div class="content">
+        <p><strong>ID:</strong> 3</p>
+        <p><strong>Email:</strong> <span id='email'><a href='mailto:c@gmail.com'>c@gmail.com</a></span></p>
+        <p><strong>School:</strong> Duke</p>
         </div>
       </div>
     </div>
+    </div>
     
         </div>
+      </div>
+    </section>    
     </main>
     </body>
     </html>
