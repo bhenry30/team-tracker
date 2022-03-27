@@ -24,5 +24,5 @@ test('get\'s engineer email', () => {
 });
 
 test('get\'s engineer GitHub', () => {
-    expect(engineer.getGithub()).toBe('Github: <a href="https://github.com/bhenry30">bhenry30<a/>')
+    expect(engineer.getGithub()).toBe('<strong>Github:</strong> <a href=\"https://github.com/bhenry30\">bhenry30</a>')
 });

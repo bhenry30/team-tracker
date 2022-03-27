@@ -28,6 +28,11 @@ const generatePage = require('./src/page-template')
 const employees = []
 
 const promptUser = () => {
+    console.log(`
+    ============================================================
+    Please fill out the following questions about your employee:
+    ============================================================
+    `);
         return inquirer.prompt([
             {
                 type: 'input',
