@@ -2,7 +2,7 @@
 
 Team Tracker is an application that uses Inquirer prompts through Node.js to ask the user questions about their work team in order to generate employee cards with distinct information about the employees. 
 
-## Using trakr
+## Using Team Tracker
 
 * Run the index.js file with Node.js.
 * Provide answers to the questions that follow
