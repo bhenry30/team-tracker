@@ -9,6 +9,7 @@ Team Tracker is an application that uses Inquirer prompts through Node.js to ask
 * The generated index.html file with appear in the dist folder.
 * Click here to watch video on how to use Team Tracker
 
+[Click here to watch video on how to use Team Tracker](./how-to-use-vid.mp4)
 ![screenshot1](./assets/images/team_tracker_screenshot.png)
 
 ## Technologies
@@ -18,10 +19,7 @@ Team Tracker is an application that uses Inquirer prompts through Node.js to ask
 * Javascript
 * Inquirer
 * Node.js
-
-## Link
-
-
+* Jest
 
 ## Contributers
 
